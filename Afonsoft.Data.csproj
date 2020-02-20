@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net4;net45;net461;net47;netcoreapp2.1;netcoreapp2.2;netcoreapp3.1;netstandard2.1</TargetFrameworks>
+    <Authors>Afonso Dutra Nogueira Filho</Authors>
+    <Company>Afonsoft</Company>
+    <Copyright>Afonsoft</Copyright>
+    <PackageProjectUrl>https://github.com/afonsoft/Afonsoft.Data</PackageProjectUrl>
+    <PackageTags>Afonsoft BusinessCollectionDictionary BusinessCollectionList DataAccessLayer DataAccessLayerCollection Enumerator ADO.NET SQL Server, Oracle</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyVersion>2020.2.20</AssemblyVersion>
+    <FileVersion>2020.2.20</FileVersion>
+    <SignAssembly>false</SignAssembly>
+    <Version>2020.2.20</Version>
+    <RepositoryUrl>https://github.com/afonsoft/Afonsoft.Data</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <Description>Afonsoft BusinessCollectionDictionary BusinessCollectionList DataAccessLayer DataAccessLayerCollection Enumerator ADO.NET SQL Server, Oracle</Description>
+    <NeutralLanguage>pt-BR</NeutralLanguage>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageReleaseNotes>Afonsoft BusinessCollectionDictionary BusinessCollectionList DataAccessLayer DataAccessLayerCollection Enumerator ADO.NET SQL Server, Oracle</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net35'">
+    <DefineConstants>NET;NET35</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net40'">
+    <DefineConstants>NET;NET40</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net45'">
+    <DefineConstants>NET;NET45;NETFULL</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net461'">
+    <DefineConstants>NET;NET461;NETFULL</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net47'">
+    <DefineConstants>NET;NET47;NETFULL;NETCORE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net48'">
+    <DefineConstants>NET;NET48;NETFULL;NETCORE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
+    <DefineConstants>NETCORE;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.1'">
+    <DefineConstants>NETCORE;NETSTANDARD;NETSTANDARD2_1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.1'">
+    <DefineConstants>NETCORE;NETCOREAPP2_1;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.2'">
+    <DefineConstants>NETCORE;NETCOREAPP2_2;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1'">
+    <DefineConstants>NETCORE;NETCOREAPP3_1;NETSTANDARD;NETSTANDARD2_1</DefineConstants>
+  </PropertyGroup>
+</Project>

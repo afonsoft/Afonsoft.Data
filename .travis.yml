@@ -1,0 +1,19 @@
+language: csharp
+sudo: required  
+dist: xenial  
+mono: latest
+dotnet: 3.1.102
+env:
+  global:
+    - ResolveNuGetPackageAssets=true
+    - EnableNuGetPackageRestore=true
+    - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true
+    - DOTNET_CLI_TELEMETRY_OPTOUT=1
+os:
+  - linux
+  - osx
+solution: Afonsoft.Data.sln
+install:
+  - dotnet restore
+script:
+  - dotnet build Afonsoft.Data.sln -f netstandard2.0
