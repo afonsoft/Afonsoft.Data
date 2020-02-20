@@ -1,6 +1,6 @@
 # Afonsoft.Data
-==============================================
-netstandard2.1
+
+##netstandard2.1
 
 -BusinessCollectionDictionary 
 -BusinessCollectionList 
