@@ -6,11 +6,15 @@ using System.Collections.Generic;
 namespace Afonsoft.Data
 {
     [Serializable]
-    public abstract class DataAccessLayerCollection<T> : DataBaseEnumerator<T>, IDataAccessLayerCollection<T>
+    public abstract class DataAccessLayerCollection<T> : IDataAccessLayerCollection<T>
     {
+        protected IDataConnector dataConnector;
         protected IEnumerator<T> enumerator;
+        protected bool isDisposed;
 
-        protected DataAccessLayerCollection(IDataConnector dataConnector) : base(dataConnector)
+        public IDataConnector DataConnector => throw new NotImplementedException();
+
+        protected DataAccessLayerCollection(IDataConnector dataConnector) 
         {
             this.dataConnector = dataConnector;
         }
@@ -20,20 +24,30 @@ namespace Afonsoft.Data
             this.enumerator.Reset();
             return this.enumerator;
         }
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             this.enumerator.Reset();
             return (IEnumerator)this.enumerator;
         }
 
-        public override void Dispose(bool disposing)
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        public void Dispose(bool disposing)
         {
             if (this.isDisposed)
                 return;
             if (disposing && this.enumerator != null)
                 this.enumerator.Dispose();
             this.isDisposed = true;
-            base.Dispose(disposing);
+        }
+
+        ~DataAccessLayerCollection()
+        {
+            Dispose(false);
         }
     }
 }
